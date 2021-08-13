@@ -1,0 +1,60 @@
+<html>
+<head>
+	 <style type="text/css">
+	 	#QuadradoAzul{
+	 		background-color: blue;
+	 		width:30px;
+ 			height:30px;
+ 			border: 1px solid;
+ 			position: sticky;
+ 			display: inline-block;
+	 	}
+	 	#QuadradoVerde{
+	 		background-color: green;
+	 		width:30px;
+ 			height:30px;
+ 			border: 1px solid;
+ 			position: sticky;
+ 			display: inline-block;
+	 	}
+	 	#QuadradoVermelho{
+	 		background-color: red;
+	 		width:30px;
+ 			height:30px;
+ 			border: 1px solid;
+ 			position: sticky;
+ 			display: inline-block;
+	 	}
+	 	
+	 </style>
+
+	 <script type="text/javascript">
+	 	
+	 	function DesenharQuadrado(cor) {
+	 		var AreaFigurasDiv = document.getElementById('AreaFiguras');
+
+			if(cor === 'blue') {
+				AreaFigurasDiv.innerHTML = AreaFigurasDiv.innerHTML+'<div id="QuadradoAzul"></div>';
+			}
+			if(cor === 'green') {
+				AreaFigurasDiv.innerHTML = AreaFigurasDiv.innerHTML+'<div id="QuadradoVerde"></div>';
+			}
+			if(cor === 'red') {
+				AreaFigurasDiv.innerHTML = AreaFigurasDiv.innerHTML+'<div id="QuadradoVermelho"></div>';
+			}
+	 		
+	 		
+
+	 	}
+	 </script>
+
+	<title></title>
+</head>
+<body>
+	<button onclick="DesenharQuadrado('blue')" style="background-color: #87CEFA">Desenhar quadrado</button>
+	<button onclick="DesenharQuadrado('green')" style="background-color: green">Desenhar quadrado</button>
+	<button onclick="DesenharQuadrado('red')" style="background-color: red">Desenhar quadrado</button>
+	<br>
+	<div id="AreaFiguras"></div>
+</body>
+</html>
