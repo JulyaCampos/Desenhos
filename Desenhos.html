@@ -6,7 +6,6 @@
 	 		width:30px;
  			height:30px;
  			border: 1px solid;
- 			position: sticky;
  			display: inline-block;
 	 	}
 	 	#QuadradoVerde{
@@ -14,7 +13,6 @@
 	 		width:30px;
  			height:30px;
  			border: 1px solid;
- 			position: sticky;
  			display: inline-block;
 	 	}
 	 	#QuadradoVermelho{
@@ -22,9 +20,58 @@
 	 		width:30px;
  			height:30px;
  			border: 1px solid;
- 			position: sticky;
  			display: inline-block;
+ 		}
+ 		#CirculoRosa{
+ 			background-color: pink;
+	 		width:30px;
+ 			height:30px;
+ 			border: 1px solid;
+ 			border-radius: 200px;
+ 			display: inline-block;
+ 		}
+ 		#CirculoRoxo{
+ 			background-color: purple;
+	 		width:30px;
+ 			height:30px;
+ 			border: 1px solid;
+ 			border-radius: 200px;
+ 			display: inline-block;
+ 		}
+ 		#CirculoAmarelo{
+ 			background-color: yellow;
+	 		width:30px;
+ 			height:30px;
+ 			border: 1px solid;
+ 			border-radius: 200px;
+ 			display: inline-block;
+ 		}
+ 		#TrianguloCinza{
+ 			width: 0; 
+  			height: 0; 
+  			border-left: 25px solid transparent;
+ 		  	border-right: 25px solid transparent;
+  			border-bottom: 25px solid #696969;
+  			display: inline-block;
+
 	 	}
+	 	#TrianguloVerde{
+ 			width: 0; 
+  			height: 0; 
+  			border-left: 25px solid transparent;
+ 		  	border-right: 25px solid transparent;
+  			border-bottom: 25px solid  #00FA9A;
+  			display: inline-block;
+	 	}
+	 	#TrianguloLaranja{
+ 			width: 0; 
+  			height: 0; 
+  			border-left: 25px solid transparent;
+ 		  	border-right: 25px solid transparent;
+  			border-bottom: 25px solid #FF8C00;
+  			display: inline-block;
+	 	}
+}
 	 	
 	 </style>
 
@@ -42,9 +89,46 @@
 			if(cor === 'red') {
 				AreaFigurasDiv.innerHTML = AreaFigurasDiv.innerHTML+'<div id="QuadradoVermelho"></div>';
 			}
-	 		
-	 		
+			if(cor === 'pink'){
+				AreaFigurasDiv.innerHTML = AreaFigurasDiv.innerHTML+'<div id="CirculoRosa"></div>';
+			}
+			if(cor === 'purple'){
+				AreaFigurasDiv.innerHTML = AreaFigurasDiv.innerHTML+'<div id="CirculoRoxo"></div>';
+			}
+			if(cor === 'yellow'){
+				AreaFigurasDiv.innerHTML = AreaFigurasDiv.innerHTML+'<div id="CirculoAmarelo"></div>';
+			}
 
+
+	 	}
+
+
+	 	function DesenharCirculo(cor) {
+	 		var AreaFigurasDiv = document.getElementById('AreaFiguras');
+
+			if(cor === 'pink'){
+				AreaFigurasDiv.innerHTML = AreaFigurasDiv.innerHTML+'<div id="CirculoRosa"></div>';
+			}
+			if(cor === 'purple'){
+				AreaFigurasDiv.innerHTML = AreaFigurasDiv.innerHTML+'<div id="CirculoRoxo"></div>';
+			}
+			if(cor === 'yellow'){
+				AreaFigurasDiv.innerHTML = AreaFigurasDiv.innerHTML+'<div id="CirculoAmarelo"></div>';
+			}
+	 	}
+
+	 	function DesenharTriangulo(cor) {
+	 		var AreaFigurasDiv = document.getElementById('AreaFiguras');
+
+			if(cor === 'gray'){
+				AreaFigurasDiv.innerHTML = AreaFigurasDiv.innerHTML+'<div id="TrianguloCinza"></div>';
+			}
+			if(cor === 'green'){
+				AreaFigurasDiv.innerHTML = AreaFigurasDiv.innerHTML+'<div id="TrianguloVerde"></div>';
+			}
+			if(cor === 'orange'){
+				AreaFigurasDiv.innerHTML = AreaFigurasDiv.innerHTML+'<div id="TrianguloLaranja"></div>';
+			}
 	 	}
 	 </script>
 
@@ -54,7 +138,14 @@
 	<button onclick="DesenharQuadrado('blue')" style="background-color: #87CEFA">Desenhar quadrado</button>
 	<button onclick="DesenharQuadrado('green')" style="background-color: green">Desenhar quadrado</button>
 	<button onclick="DesenharQuadrado('red')" style="background-color: red">Desenhar quadrado</button>
-	<br>
+	<button onclick="DesenharCirculo('pink')" style="background-color: pink">Desenhar circulo</button>
+	<button onclick="DesenharCirculo('purple')" style="background-color: purple">Desenhar circulo</button>
+	<button onclick="DesenharCirculo('yellow')" style="background-color: yellow">Desenhar circulo</button>
+	<button onclick="DesenharTriangulo('gray')" style="background-color: gray">Desenhar triângulo</button>
+	<button onclick="DesenharTriangulo('green')" style="background-color: green">Desenhar triângulo</button>
+	<button onclick="DesenharTriangulo('orange')" style="background-color: orange">Desenhar triângulo</button>
+	<br><br>
 	<div id="AreaFiguras"></div>
+
 </body>
 </html>
